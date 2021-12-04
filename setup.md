@@ -64,9 +64,6 @@ The following steps outline how to host this application on NYU's **i6**.cims.ny
 1. Familiarize yourself with web hosting steps on a CIMS server from the link: https://cims.nyu.edu/webapps/content/systems/userservices/webhosting.
 1. remotely log into the server using `ssh`.
 1. navigate into your web server account's `public_html` directory using `cd public_html`.
-<<<<<<< HEAD
-1. clone this repository with `git clone https://github.com/dbdesign-students-fall2021/web-app-uljadberdica1000`..
-=======
 1. clone this repository with `git clone https://github.com/dbdesign-students-fall2021/web-app-uljadberdica1000`.
 >>>>>>> 55e303a22b7ea1310f0a3f950b0019072d7abb75
 1. navigate into the directory that was created by the clone operation.
