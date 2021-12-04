@@ -74,7 +74,7 @@ The following steps outline how to host this application on NYU's **i6**.cims.ny
 
 ## Continuous deployment
 
-While not required, it is possible to automatically update a copy of this web app anytime new changes to the code are pushed to GitHub. Such an automatic update of a deployed web app is known as "continuous deployment".
+While not required, it is possible to automatically update a copy of this web app anytime new changes to the code are pushed to GitHub. Such an automatic update of a deployed web app is known as "continuous deployment"..
 
 
 Each repository on GitHub has a set of Settings for Webhooks. In those settings, it is possible to enter a "Payload URL" - GitHub will automatically issue an HTTP POST request to any URL you place there. The example web app code has a route designed to accept a webhook request from GitHub. That route automatically perform a `git pull` operation on the app's source code repository to update the code each time such a webhook request occurs.
