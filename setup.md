@@ -65,7 +65,6 @@ The following steps outline how to host this application on NYU's **i6**.cims.ny
 1. remotely log into the server using `ssh`.
 1. navigate into your web server account's `public_html` directory using `cd public_html`.
 1. clone this repository with `git clone https://github.com/dbdesign-students-fall2021/web-app-uljadberdica1000`.
->>>>>>> 55e303a22b7ea1310f0a3f950b0019072d7abb75
 1. navigate into the directory that was created by the clone operation.
 1. copy the file named `env.example` into a new file named `.env` (using `cp env.example .env`).
 1. edit the `.env` file using `emacs .env`, and enter your own MongoDB database connection credentials into that file where indicated. Save the changes within emacs by typing `Control-x` then `Control-s`. Exit emacs by typing, `Control-x` then `Control-c`.
