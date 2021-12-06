@@ -44,7 +44,7 @@ def read():
     Route for GET requests to the read page.
     Displays some information for the user with links to other pages.
     """
-    docs = db.posts.find().limit(10).sort({"date":-1})# sort in descending order of created_at timestamp
+    docs = db.posts.find().limit(10).sort({"urgency":-1})# sort in descending order of created_at timestamp
     return render_template('read.html', docs=docs) # render the read template
 
 
