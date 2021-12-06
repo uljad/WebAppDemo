@@ -89,7 +89,7 @@ def create_post():
     return redirect(url_for('read')) # tell the browser to make a request for the /read route
 
 
-@app.route('/edit_auth')
+@app.route('/edit_post')
 def edit(mongoid):
     """
     Route for GET requests to the edit page.
