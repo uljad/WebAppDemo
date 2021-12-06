@@ -69,6 +69,7 @@ def create_post():
     type=request.form['ftype']
     urgency = request.form['furgency']
     tagged = request.form['ftaged']
+    edit_password: request.form['fcode'] #for the editing provileges
 
     # create a new document with the data the user entered
     now = datetime.datetime.now()
@@ -79,7 +80,8 @@ def create_post():
         "date": datetime.datetime.utcnow(),
         "content": content,
         "urgency":urgency,
-        "ftagged":tagged
+        "ftagged":tagged,
+        "password": edit_password
     }
 
     db.posts.insert_one(doc) # insert a new document
