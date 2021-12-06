@@ -71,6 +71,9 @@ The following steps outline how to host this application on NYU's **i6**.cims.ny
 1. Make the files named `flask.cgi` executable by all with the command, `chmod a+x flask.cgi`.
 1. Your app should now be live on the web at https://i6.cims.nyu.edu/~$USER/$flask-app-directory/flask.cgi, where `$USER` is replaced with your own **i6** username and `$flask-app-directory` is replaced with the name of the sub-directory within `public_html` where your flask app code resides. Visit that address in your preferred web browser.
 
+`https://i6.cims.nyu.edu/~ub352/WebAppDemo/flask.cgi/read`
+
+
 ## Continuous deployment
 
 While not required, it is possible to automatically update a copy of this web app anytime new changes to the code are pushed to GitHub. Such an automatic update of a deployed web app is known as "continuous deployment"..
