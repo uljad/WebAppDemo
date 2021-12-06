@@ -10,7 +10,7 @@
         <p class="post">
 
             <br>
-            Posted by {{doc.type}} at {{ doc.username }} at {{ dateToString: { format: "%Y-%m-%d %H:%M", date: "$data_added"} }}
+            Posted by {{doc.type}} at {{ doc.username }} at {{doc.date_added.strftime("%H:%M on %d %B %Y")}}
         </br>
         </p>
             
