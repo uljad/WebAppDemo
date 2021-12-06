@@ -8,14 +8,13 @@
     <div>
         <hr class="solid">
         <p class="post">
+
+            <br>
             Posted by {{doc.type}} at {{ doc.username }} at {{doc.date_added}}
-            <!-- </br>
-            <a href="{{ url_for('edit',mongoid=doc._id)}}">Edit</a> | <a href="{{ url_for('delete',mongoid=doc._id)}}">Delete</a>
-            </br> -->
+            </br?
+
+
         </p>
-        <p>
-            {{ doc.message }}
-        </p> -->
             
     </div>
     {%endfor%}
