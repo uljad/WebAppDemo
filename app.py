@@ -96,7 +96,7 @@ def edit(mongoid):
     Displays a form users can fill out to edit an existing record.
     """
     doc = db.exampleapp.find_one({"_id": ObjectId(mongoid)})
-    return render_template('edit_auth.html', mongoid=mongoid, doc=doc) # render the edit template
+    return render_template('edit.html', mongoid=mongoid, doc=doc) # render the edit template
 
 
 @app.route('/edit/<mongoid>', methods=['POST'])
