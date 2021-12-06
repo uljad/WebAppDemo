@@ -71,7 +71,7 @@ def create_post():
 
     # create a new document with the data the user entered
     doc = {
-        "type": type,
+        "Type": type,
         "username": username, 
         "date": datetime.datetime.utcnow(),
         "content": content,
