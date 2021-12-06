@@ -70,10 +70,12 @@ def create_post():
     urgency = request.form['furgency']
 
     # create a new document with the data the user entered
+    now = datetime.datetime.now()
+
     doc = {
         "Type": type,
         "username": username, 
-        "date": datetime.datetime.utcnow(),
+        "date": now.strftime("%Y/%m/%d %H:%M:%S"),
         "content": content,
         "urgency":urgency
     }
