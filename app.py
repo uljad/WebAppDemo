@@ -54,6 +54,7 @@ def create():
     Route for GET requests to the create page.
     Displays a form users can fill out to create a new document.
     """
+
     return render_template('create.html') # render the create template
 
 
@@ -63,16 +64,21 @@ def create_post():
     Route for POST requests to the create page.
     Accepts the form submission data for a new document and saves the document to the database.
     """
-    name = request.form['fname']
-    message = request.form['fmessage']
+    username = request.form['fname']
+    content = request.form['fmessage']
+    type=request.form['ftype']
+    urgency = request.form['furgency']
 
 
     # create a new document with the data the user entered
     doc = {
-        "name": name,
-        "message": message, 
-        "created_at": datetime.datetime.utcnow()
+        "type": type,
+        "username": username, 
+        "date_added": datetime.datetime.utcnow(),
+        "content": content,
+        "urgency":urgency
     }
+
     db.exampleapp.insert_one(doc) # insert a new document
 
     return redirect(url_for('read')) # tell the browser to make a request for the /read route
