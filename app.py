@@ -69,7 +69,6 @@ def create_post():
     type=request.form['ftype']
     urgency = request.form['furgency']
 
-
     # create a new document with the data the user entered
     doc = {
         "type": type,
@@ -79,7 +78,7 @@ def create_post():
         "urgency":urgency
     }
 
-    db.exampleapp.insert_one(doc) # insert a new document
+    db.posts.insert_one(doc) # insert a new document
 
     return redirect(url_for('read')) # tell the browser to make a request for the /read route
 
