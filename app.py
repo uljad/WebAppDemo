@@ -75,7 +75,7 @@ def create_post():
     doc = {
         "Type": type,
         "username": username, 
-        "date": now.strftime("%m/%d/%y %H:%M"),
+        "date": datetime.datetime.utcnow(),
         "content": content,
         "urgency":urgency
     }
