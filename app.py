@@ -73,7 +73,7 @@ def create_post():
     doc = {
         "type": type,
         "username": username, 
-        "date_added": datetime.datetime.utcnow(),
+        "date": datetime.datetime.utcnow(),
         "content": content,
         "urgency":urgency
     }
