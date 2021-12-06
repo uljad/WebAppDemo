@@ -68,6 +68,7 @@ def create_post():
     content = request.form['fmessage']
     type=request.form['ftype']
     urgency = request.form['furgency']
+    tagged = request.form['ftaged']
 
     # create a new document with the data the user entered
     now = datetime.datetime.now()
@@ -77,7 +78,8 @@ def create_post():
         "username": username, 
         "date": datetime.datetime.utcnow(),
         "content": content,
-        "urgency":urgency
+        "urgency":urgency,
+        "ftagged":tagged
     }
 
     db.posts.insert_one(doc) # insert a new document
@@ -85,7 +87,7 @@ def create_post():
     return redirect(url_for('read')) # tell the browser to make a request for the /read route
 
 
-@app.route('/edit/<mongoid>')
+@app.route('/edit')
 def edit(mongoid):
     """
     Route for GET requests to the edit page.
