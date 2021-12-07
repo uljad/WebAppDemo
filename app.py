@@ -132,9 +132,6 @@ def edit_post():
                                     "urgency":urgency,"tagged":tagged}},upsert=new_entry,return_document=ReturnDocument.AFTER)
 
     
-    count=db.posts.find({"content":old_content,"username":username,"password":edit_password}).count()
-
-
     return redirect(url_for('read')) # tell the browser to make a request for the /read route
 
 
