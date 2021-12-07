@@ -1,6 +1,7 @@
 .container {
   border: 5px solid;
-  width: 90%;
+  border-color:#04067d ;
+  width: 100%;
   margin: 0 auto;
 }
 
