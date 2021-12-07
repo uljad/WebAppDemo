@@ -105,20 +105,25 @@ def edit_post(mongoid):
     Route for POST requests to the edit page.
     Accepts the form submission data for the specified document and updates the document in the database.
     """
-    name = request.form['fname']
-    message = request.form['fmessage']
+    username = request.form['fname']
+    content = request.form['fmessage']
+    type=request.form['ftype']
+    urgency = request.form['furgency']
+    tagged = request.form['ftaged']
+    edit_password: request.form['fcode'] #for the editing provileges
+
+    # create a new document with the data the user entered
+    now = datetime.datetime.now()
 
     doc = {
-        # "_id": ObjectId(mongoid), 
-        "name": name, 
-        "message": message, 
-        "created_at": datetime.datetime.utcnow()
+        "Type": type,
+        "username": username, 
+        "date": datetime.datetime.utcnow(),
+        "content": content,
+        "urgency":urgency,
+        "ftagged":tagged,
+        "password": edit_password
     }
-
-    db.exampleapp.update_one(
-        {"_id": ObjectId(mongoid)}, # match criteria
-        { "$set": doc }
-    )
 
     return redirect(url_for('read')) # tell the browser to make a request for the /read route
 
