@@ -103,7 +103,12 @@ textarea,
 input {
   width: 100%;
   font-family: Verdana, Tahoma, sans-serif, sans-serif;
-  font-size: 1.5em;
-
+  font-size: 3em;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 
 }
