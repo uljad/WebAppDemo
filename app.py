@@ -7,6 +7,7 @@ import datetime
 from bson.objectid import ObjectId
 import os
 import subprocess
+from pymongo import ReturnDocument
 
 # instantiate the app
 app = Flask(__name__)
@@ -80,7 +81,7 @@ def create_post():
         "date": datetime.datetime.utcnow(),
         "content": content,
         "urgency":urgency,
-        "ftagged":tagged,
+        "tagged":tagged,
         "password": edit_password
     }
 
@@ -105,25 +106,29 @@ def edit_post(mongoid):
     Route for POST requests to the edit page.
     Accepts the form submission data for the specified document and updates the document in the database.
     """
-    username = request.form['fname']
-    content = request.form['fmessage']
-    type=request.form['ftype']
-    urgency = request.form['furgency']
-    tagged = request.form['ftaged']
-    edit_password: request.form['fcode'] #for the editing provileges
+    username = request.form['fname2']
+    old_content = request.form['fmessage2']
+    new_content=request.form['fmessage3']
+    type=request.form['ftype2']
+    urgency = request.form['furgency2']
+    tagged = request.form['ftaged2']
+    edit_password: request.form['fcode2'] #for the editing provileges
 
     # create a new document with the data the user entered
-    now = datetime.datetime.now()
-
-    doc = {
-        "Type": type,
-        "username": username, 
-        "date": datetime.datetime.utcnow(),
-        "content": content,
-        "urgency":urgency,
-        "ftagged":tagged,
-        "password": edit_password
-    }
+    
+    doc=db.posts.find_one_and_update({"content":old_content,"username":username,"password":edit_password},
+                                    {'$set':{"content":new_content,
+                                    "Type":type,"date":datetime.datetime.utcnow(),
+                                    "urgency":urgency,"tagged":tagged}},upsert=True,return_document=ReturnDocument.AFTER)
+    # doc = {
+    #     "Type": type,
+    #     "username": username, 
+    #     "date": datetime.datetime.utcnow(),
+    #     "content": content,
+    #     "urgency":urgency,
+    #     "tagged":tagged,
+    #     "password": edit_password
+    # }
 
     return redirect(url_for('read')) # tell the browser to make a request for the /read route
 
