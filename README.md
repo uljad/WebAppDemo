@@ -67,3 +67,5 @@ I tried to make the webpage responsive to user interaction as advised by the tut
 
 create the `.env` and `run flask` to enjoy! The i6 hosted website was working until today at 4 am. I tried reverting to the point where it last worked and it still gives an error. 
 
+Final Submission 10 am, Dec 7
+
