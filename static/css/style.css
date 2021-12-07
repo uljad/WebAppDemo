@@ -80,12 +80,23 @@ footer {
   color: #d9534f;
 }
 
+.btn-home.btn-outline{
+
+  color: #bbd94fa2;
+
+}
+
 .btn-home.btn-outline:hover,
 .btn-read.btn-outline:hover,
 .btn-create.btn-outline:hover,
 .btn-edit.btn-outline:hover {
   color: rgb(214, 6, 127);
   background-color: lightgray;
+}
+
+.btn-home.btn-outline:hover{
+  color: rgb(214, 48, 6);
+  background-color: rgb(186, 223, 52);
 }
 
 textarea,
