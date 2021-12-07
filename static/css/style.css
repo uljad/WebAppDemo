@@ -5,7 +5,9 @@
   margin: 0 auto;
 }
 
-header,
+header{
+  text-align: center;
+}
 footer,
 main {
   padding: 20px;
