@@ -99,7 +99,7 @@ def edit(mongoid):
     return render_template('edit.html', mongoid=mongoid, doc=doc) # render the edit template
 
 
-@app.route('/edit/<mongoid>', methods=['POST'])
+@app.route('/edit_auth', methods=['POST'])
 def edit_post(mongoid):
     """
     Route for POST requests to the edit page.
@@ -120,7 +120,7 @@ def edit_post(mongoid):
         { "$set": doc }
     )
 
-    return redirect(url_for('read')) # tell the browser to make a request for the /read route
+    return redirect(url_for('edit_auth')) # tell the browser to make a request for the /read route
 
 
 @app.route('/delete/<mongoid>')
