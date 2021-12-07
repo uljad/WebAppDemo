@@ -153,9 +153,10 @@ def delete_post():
     username = request.form['fname3']
     del_content=request.form['fmessage4']
     edit_password= request.form['fcode3'] #for the editing provileges
+
     my_query={"username":username,"password":edit_password,"content":del_content}
     
-    # db.posts.delete_one(my_query)
+    db.posts.delete_one(my_query)
     return redirect(url_for('read')) # tell the web browser to make a request for the /read route.
 
 @app.route('/webhook', methods=['POST'])
