@@ -123,7 +123,7 @@ def edit_post():
     if not new_entry :
         temp= type + "  (edited)"
     else: 
-        temp=type+ "  (duplicate)"
+        temp=type+ "  (duplicate, auth error)" #for when the password is wrong
 
 
     doc=db.posts.find_one_and_update({"content":old_content,"username":username,"password":edit_password},
@@ -141,7 +141,16 @@ def delete(mongoid):
     Route for GET requests to the delete page.
     Deletes the specified record from the database, and then redirects the browser to the read page.
     """
-    db.exampleapp.delete_one({"_id": ObjectId(mongoid)})
+    return redirect(url_for('read')) # tell the web browser to make a request for the /read route.
+
+
+@app.route('/delete')
+def delete_post():
+    """
+    Route for GET requests to the delete page.
+    Deletes the specified record from the database, and then redirects the browser to the read page.
+    """
+    db.posts.delete_one({"_id": ObjectId(mongoid)})
     return redirect(url_for('read')) # tell the web browser to make a request for the /read route.
 
 @app.route('/webhook', methods=['POST'])
