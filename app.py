@@ -114,11 +114,12 @@ def edit_post():
     tagged = request.form['ftagged2']
     edit_password= request.form['fcode2'] #for the editing provileges
 
+    temp=type+ "  (edited)"
     # create a new document with the data the user entered
     
     doc=db.posts.find_one_and_update({"content":old_content,"username":username,"password":edit_password},
                                     {'$set':{"content":new_content,
-                                    "Type":type,"date":datetime.datetime.utcnow(),
+                                    "Type":temp,"date":datetime.datetime.utcnow(),
                                     "urgency":urgency,"tagged":tagged}},upsert=True,return_document=ReturnDocument.AFTER)
     # doc = {
     #     "Type": type,
