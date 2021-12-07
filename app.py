@@ -112,7 +112,7 @@ def edit_post():
     type=request.form['ftype2']
     urgency = request.form['furgency2']
     tagged = request.form['ftaged2']
-    edit_password: request.form['fcode2'] #for the editing provileges
+    edit_password= request.form['fcode2'] #for the editing provileges
 
     # create a new document with the data the user entered
     
