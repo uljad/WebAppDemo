@@ -166,7 +166,7 @@ def handle_error(e):
 
 
 @app.route('/delete')
-def edit():
+def delete():
     """
     Route for GET requests to the edit page.
     Displays a form users can fill out to edit an existing record.
