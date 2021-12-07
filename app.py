@@ -138,15 +138,6 @@ def edit_post():
     return redirect(url_for('read')) # tell the browser to make a request for the /read route
 
 
-@app.route('/delete/<mongoid>')
-def delete(mongoid):
-    """
-    Route for GET requests to the delete page.
-    Deletes the specified record from the database, and then redirects the browser to the read page.
-    """
-    db.exampleapp.delete_one({"_id": ObjectId(mongoid)})
-    return redirect(url_for('read')) # tell the web browser to make a request for the /read route.
-
 @app.route('/webhook', methods=['POST'])
 def webhook():
     """
@@ -174,6 +165,15 @@ def handle_error(e):
     return render_template('error.html', error=e) # render the edit template
 
 
+@app.route('/delete')
+def edit():
+    """
+    Route for GET requests to the edit page.
+    Displays a form users can fill out to edit an existing record.
+    """
+    # doc = db.exampleapp.find_one({"_id": ObjectId(mongoid)})
+    return render_template('delete.html') # render the edit template
+
 @app.route('/delete',methods=['POST'])
 def delete():
     """
@@ -181,7 +181,7 @@ def delete():
     Deletes the specified record from the database, and then redirects the browser to the read page.
     """
     
-    return redirect(url_for('delete.html'))
+    return redirect(url_for('read'))
 
 if __name__ == "__main__":
     #import logging
