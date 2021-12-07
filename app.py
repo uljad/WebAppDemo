@@ -135,13 +135,13 @@ def edit_post():
     return redirect(url_for('read')) # tell the browser to make a request for the /read route
 
 
-@app.route('/delete/<mongoid>')
-def delete(mongoid):
+@app.route('/delete')
+def delete():
     """
     Route for GET requests to the delete page.
     Deletes the specified record from the database, and then redirects the browser to the read page.
     """
-    return redirect(url_for('read')) # tell the web browser to make a request for the /read route.
+    return render_template('delete.html') # tell the web browser to make a request for the /read route.
 
 
 @app.route('/delete')
