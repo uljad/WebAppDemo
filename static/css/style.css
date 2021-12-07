@@ -121,7 +121,14 @@ footer {
 
 }
 
+.btn-delete.btn-outline{
+
+  color: #0c0000e0;
+
+}
+
 .btn-home.btn-outline:hover,
+.btn-delete.btn-outline:hover,
 .btn-read.btn-outline:hover,
 .btn-create.btn-outline:hover,
 .btn-edit.btn-outline:hover {

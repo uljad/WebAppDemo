@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block container %}
+
+<script src="https://github.com/uljadberdica1000/WebAppDemo/blob/main/YesNo.js"></script>
+
+Yes <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck"> No <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck"><br>
+    <div id="ifYes" style="visibility:hidden">
+        If yes, explain: <input type='text' id='yes' name='yes'><br>
+        What can we do to accommodate you?  <input type='text' id='acc' name='acc'>
+    </div>
+        
+        other 3<input type='text' id='other3' name='other3'><br>
+        other 4<input type='text' id='other4' name='other4'><br>
+{% endblock %}
