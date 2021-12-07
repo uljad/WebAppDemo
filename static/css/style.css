@@ -1,6 +1,6 @@
 .container {
-  border: 2px solid;
-  width: 50%;
+  border: 5px solid;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -12,14 +12,14 @@ main {
 
 header,
 main {
-  border-bottom: 2px solid;
-  margin-bottom: 5px;
+  border-bottom: 10px solid;
+  margin-bottom: 15px;
 }
 
 p.post {
-  font-size: 12px;
+  font-size: 24px;
 }
 
 footer {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
