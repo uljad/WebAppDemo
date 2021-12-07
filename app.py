@@ -114,22 +114,26 @@ def edit_post():
     tagged = request.form['ftagged2']
     edit_password= request.form['fcode2'] #for the editing provileges
 
-    temp=type+ "  (edited)"
     # create a new document with the data the user entered
     
+    count=db.posts.count_documents({"content":old_content,"username":username,"password":edit_password}).count()
+
+    new_entry=True if count==0 else False
+    #make sure to add new record only if there is not one already filling the conditions of query 
+    if not new_entry :
+        temp= type + "  (edited)"
+    else: 
+        temp=type+ "  (duplicate)"
+
+
     doc=db.posts.find_one_and_update({"content":old_content,"username":username,"password":edit_password},
                                     {'$set':{"content":new_content,
                                     "Type":temp,"date":datetime.datetime.utcnow(),
-                                    "urgency":urgency,"tagged":tagged}},upsert=True,return_document=ReturnDocument.AFTER)
-    # doc = {
-    #     "Type": type,
-    #     "username": username, 
-    #     "date": datetime.datetime.utcnow(),
-    #     "content": content,
-    #     "urgency":urgency,
-    #     "tagged":tagged,
-    #     "password": edit_password
-    # }
+                                    "urgency":urgency,"tagged":tagged}},upsert=new_entry,return_document=ReturnDocument.AFTER)
+
+    
+    count=db.posts.find({"content":old_content,"username":username,"password":edit_password}).count()
+
 
     return redirect(url_for('read')) # tell the browser to make a request for the /read route
 
