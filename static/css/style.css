@@ -53,9 +53,9 @@ footer {
   color: #d9534f;
 }
 
-.btn-primary.btn-outline:hover,
-.btn-success.btn-outline:hover,
-.btn-warning.btn-outline:hover,
-.btn-danger.btn-outline:hover {
+.btn-home.btn-outline:hover,
+.btn-read.btn-outline:hover,
+.btn-create.btn-outline:hover,
+.btn-edit.btn-outline:hover {
   color: #fff;
 }
