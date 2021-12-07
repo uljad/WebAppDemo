@@ -58,6 +58,12 @@ p {
   font-size: 1.5em;
 }
 
+p.posts_red {
+  font-family: Verdana, Tahoma, sans-serif, sans-serif;
+  color: navy;
+  font-size: 1.5em;
+}
+
 p.content_red{
   font-family: Verdana, Tahoma, sans-serif, sans-serif;
   color: rgb(128, 0, 0);
