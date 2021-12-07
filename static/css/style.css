@@ -26,6 +26,7 @@ header{
 }
 
 h2{
+  font-family: Verdana, Tahoma, sans-serif, sans-serif;
   text-align: center;
 }
 
@@ -47,6 +48,7 @@ main {
 }
 
 p {
+  font-family: Verdana, Tahoma, sans-serif, sans-serif;
   color: navy;
   font-size: 1.5em;
 }
