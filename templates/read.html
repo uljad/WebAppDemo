@@ -2,19 +2,21 @@
 
 {% block container %}
 <h2>Read</h2>
-<p>This page shows information pulled from a MongoDB database collection.
+<p>This page shows information pulled from the posts collection.
         
     {% for doc in docs %}
     <div>
         <hr class="read">
-        <p class="post">
+        <p class="post_red">
 
             <br>
-            <b>{{ doc.username }}</b> posted on <i>{{doc.date}}</i> of type <b>{{doc.Type}}</b>
+            <b>{{ doc.username }}</b> posted on <i>{{doc.date}}</i> about <b>{{doc.Type}}</b>
         </br>
 
         <br>
+        <p class="content">
         {{doc.content}}
+        </p>
         </br>
         </p>
             

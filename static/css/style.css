@@ -58,6 +58,12 @@ p {
   font-size: 1.5em;
 }
 
+p.content{
+  font-family: Verdana, Tahoma, sans-serif, sans-serif;
+  color: rgb(128, 0, 0);
+  font-size: 2em;
+}
+
 p.post {
   font-size: 12px;
 }
