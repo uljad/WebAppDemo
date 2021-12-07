@@ -61,6 +61,9 @@ Due to the server Errors I could not implement the [JavaScript part](https://cod
 
 I tried to make the webpage responsive to user interaction as advised by the tutors. 
 
+## Mock Data
+
+1000 Entries were generated using Mockaroo from this [schema](https://mockaroo.com/bb59b370)
 
 create the `.env` and `run flask` to enjoy!
 
