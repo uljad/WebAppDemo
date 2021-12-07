@@ -23,6 +23,10 @@ header{
   color:gray;
 }
 
+h2{
+  text-align: center;
+}
+
 h2 .welcome{
   text-align: center;
   font-family: Verdana, Tahoma, sans-serif, sans-serif;
