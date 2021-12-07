@@ -9,6 +9,7 @@ header,
 footer,
 main {
   padding: 20px;
+  position: center;
 }
 
 header,
