@@ -34,8 +34,9 @@ footer {
 
   background-color: transparent;
   color: inherit;
-  transition: all .5s;
+  transition: all 1s;
   padding: 15px 32px;
+  font-size: 30px
 }
 
 .btn-home.btn-outline {
