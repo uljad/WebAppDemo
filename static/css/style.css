@@ -102,4 +102,8 @@ footer {
 textarea,
 input {
   width: 100%;
+  font-family: Verdana, Tahoma, sans-serif, sans-serif;
+  font-size: 1em;
+
+
 }
