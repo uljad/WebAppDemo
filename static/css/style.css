@@ -113,8 +113,8 @@ footer {
 
 .fa-github:hover{
   color: rgb(214, 48, 6);
-  background-color: rgb(186, 223, 52);
   font-size:100px;
+  transform: scale(1.5)
 }
 
 textarea,
