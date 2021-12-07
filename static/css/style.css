@@ -57,5 +57,5 @@ footer {
 .btn-read.btn-outline:hover,
 .btn-create.btn-outline:hover,
 .btn-edit.btn-outline:hover {
-  color: #fff;
+  color: rgba(0, 0, 0, 0.055);
 }
