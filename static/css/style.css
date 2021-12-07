@@ -8,6 +8,7 @@
 header{
   text-align: center;
 }
+
 footer,
 main {
   padding: 20px;
@@ -30,9 +31,11 @@ footer {
 
 
 .btn-outline {
+
   background-color: transparent;
   color: inherit;
   transition: all .5s;
+  padding: 15px 32px;
 }
 
 .btn-home.btn-outline {
