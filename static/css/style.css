@@ -11,6 +11,11 @@ header{
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h2 .Welcome{
+  text-align: center;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
 footer,
 main {
   padding: 20px;
