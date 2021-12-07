@@ -89,17 +89,17 @@ def create_post():
     return redirect(url_for('read')) # tell the browser to make a request for the /read route
 
 
-@app.route('/edit_post')
+@app.route('/edit')
 def edit(mongoid):
     """
     Route for GET requests to the edit page.
     Displays a form users can fill out to edit an existing record.
     """
     doc = db.exampleapp.find_one({"_id": ObjectId(mongoid)})
-    return render_template('edit_auth.html', mongoid=mongoid, doc=doc) # render the edit template
+    return render_template('edit.html', mongoid=mongoid, doc=doc) # render the edit template
 
 
-@app.route('/edit_auth', methods=['POST'])
+@app.route('/edit/<mongoid>', methods=['POST'])
 def edit_post(mongoid):
     """
     Route for POST requests to the edit page.
