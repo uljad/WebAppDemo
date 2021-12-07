@@ -99,7 +99,7 @@ def edit(mongoid):
     return render_template('edit.html', mongoid=mongoid, doc=doc) # render the edit template
 
 
-@app.route('/edit/<mongoid>', methods=['POST'])
+@app.route('/edit', methods=['POST'])
 def edit_post(mongoid):
     """
     Route for POST requests to the edit page.
