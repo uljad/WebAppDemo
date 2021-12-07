@@ -21,6 +21,9 @@
 
 ul.descriptions {
   list-style-type: circle;
+  text-align:center;
+  font-size:2em;
+  color:#be2097af;
 }
 
 hr.read {
