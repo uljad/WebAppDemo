@@ -1,7 +1,5 @@
 {% extends 'base.html' %} {% block container %}
 
-<script src="https://github.com/uljadberdica1000/WebAppDemo/blob/main/YesNo.js"></script>
-
 <form method="POST" action="{{ url_for('delete') }}">
 
 Yes <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck"> No <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck"><br>
