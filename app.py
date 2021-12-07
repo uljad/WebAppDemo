@@ -120,7 +120,7 @@ def edit_post(mongoid):
         { "$set": doc }
     )
 
-    return redirect(url_for('edit_auth')) # tell the browser to make a request for the /read route
+    return redirect(url_for('read')) # tell the browser to make a request for the /read route
 
 
 @app.route('/delete/<mongoid>')
