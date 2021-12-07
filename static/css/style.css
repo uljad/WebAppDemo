@@ -80,7 +80,7 @@ footer {
   color: #d9534f;
 }
 
-.btn-home.btn-outline{
+.btn-submit.btn-outline{
 
   color: #bbd94fa2;
 
@@ -94,7 +94,7 @@ footer {
   background-color: lightgray;
 }
 
-.btn-home.btn-outline:hover{
+.btn-submit.btn-outline:hover{
   color: rgb(214, 48, 6);
   background-color: rgb(186, 223, 52);
 }
