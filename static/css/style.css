@@ -11,6 +11,7 @@
   width: 55%;
   margin: 0 auto;
   font-family: Verdana, Tahoma, sans-serif, sans-serif;
+  font-size: 4vw;
   
 }
 
@@ -22,7 +23,7 @@ header{
 
 h2 .welcome{
   text-align: center;
-  font-family: 'Trebuchet MS', sans-serif;
+  font-family: Verdana, Tahoma, sans-serif, sans-serif;
 }
 
 footer,
