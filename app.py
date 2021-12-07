@@ -180,7 +180,6 @@ def delete():
     Route for GET requests to the delete page.
     Deletes the specified record from the database, and then redirects the browser to the read page.
     """
-    
     return redirect(url_for('read'))
 
 if __name__ == "__main__":
