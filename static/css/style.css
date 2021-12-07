@@ -110,6 +110,13 @@ footer {
   background-color: rgb(186, 223, 52);
 }
 
+
+.fa-github:hover{
+  color: rgb(214, 48, 6);
+  background-color: rgb(186, 223, 52);
+  font-size:100px;
+}
+
 textarea,
 input {
   width: 100%;
