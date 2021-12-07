@@ -19,6 +19,10 @@
   
 }
 
+ul.descriptions {
+  list-style-type: circle;
+}
+
 hr.read {
   border: 7px solid rgb(255, 255, 255);
   border-radius: 7px;
