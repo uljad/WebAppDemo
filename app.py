@@ -174,12 +174,13 @@ def handle_error(e):
     return render_template('error.html', error=e) # render the edit template
 
 
-@app.route('/delete')
+@app.route('/delete',methods=['POST'])
 def delete():
     """
     Route for GET requests to the delete page.
     Deletes the specified record from the database, and then redirects the browser to the read page.
     """
+    
     return redirect(url_for('delete.html'))
 
 if __name__ == "__main__":
