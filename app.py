@@ -175,7 +175,7 @@ def delete():
     return render_template('delete.html') # render the edit template
 
 @app.route('/delete',methods=['POST'])
-def delete():
+def delete_post():
     """
     Route for GET requests to the delete page.
     Deletes the specified record from the database, and then redirects the browser to the read page.
