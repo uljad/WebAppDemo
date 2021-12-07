@@ -165,22 +165,22 @@ def handle_error(e):
     return render_template('error.html', error=e) # render the edit template
 
 
-@app.route('/delete')
-def delete():
-    """
-    Route for GET requests to the edit page.
-    Displays a form users can fill out to edit an existing record.
-    """
-    # doc = db.exampleapp.find_one({"_id": ObjectId(mongoid)})
-    return render_template('delete.html') # render the edit template
+# @app.route('/delete')
+# def delete():
+#     """
+#     Route for GET requests to the edit page.
+#     Displays a form users can fill out to edit an existing record.
+#     """
+#     # doc = db.exampleapp.find_one({"_id": ObjectId(mongoid)})
+#     return render_template('delete.html') # render the edit template
 
-@app.route('/delete',methods=['POST'])
-def delete_post():
-    """
-    Route for GET requests to the delete page.
-    Deletes the specified record from the database, and then redirects the browser to the read page.
-    """
-    return redirect(url_for('read'))
+# @app.route('/delete',methods=['POST'])
+# def delete_post():
+#     """
+#     Route for GET requests to the delete page.
+#     Deletes the specified record from the database, and then redirects the browser to the read page.
+#     """
+#     return redirect(url_for('read'))
 
 if __name__ == "__main__":
     #import logging
