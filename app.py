@@ -69,7 +69,7 @@ def create_post():
     content = request.form['fmessage']
     type=request.form['ftype']
     urgency = request.form['furgency']
-    tagged = request.form['ftaged']
+    tagged = request.form['ftagged']
     edit_password: request.form['fcode'] #for the editing provileges
 
     # create a new document with the data the user entered
