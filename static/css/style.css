@@ -43,7 +43,9 @@ footer {
   color: inherit;
   transition: all 1s;
   padding: 15px 32px;
-  font-size: 30px
+  font-size: 30px;
+  border-radius: 12px;
+  border: 2px solid rgb(214, 6, 127)
 }
 
 .btn-home.btn-outline {
