@@ -73,4 +73,5 @@ footer {
 .btn-create.btn-outline:hover,
 .btn-edit.btn-outline:hover {
   color: rgb(214, 6, 127);
+  background-color: lightgray;
 }
