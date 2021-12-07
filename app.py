@@ -116,7 +116,7 @@ def edit_post():
 
     # create a new document with the data the user entered
     
-    count=db.posts.count_documents({"content":old_content,"username":username,"password":edit_password}).count()
+    count=db.posts.count_documents({"content":old_content,"username":username,"password":edit_password})
 
     new_entry=True if count==0 else False
     #make sure to add new record only if there is not one already filling the conditions of query 
