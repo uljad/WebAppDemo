@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block container %}
 <h2>Delete</h2>
 <p>Delte a record in the MongoDB database collection using </p>
-<form method="POST" action="{{ url_for('delete') }}">
+<form method="POST" action="{{ url_for('delete_post') }}">
   <p>UserName to Delete: <input type="text" id="fname3" name="fname3" /><br /></p>
   <p>password: <input type="password" id="fcode3" name="fcode3" /><br /></p>
   <p>
