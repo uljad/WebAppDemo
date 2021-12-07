@@ -1,13 +1,25 @@
 {% extends 'base.html' %} {% block container %}
-
+<h2>Update</h2>
+<p>Edit a record in the MongoDB database collection.</p>
 <form method="POST" action="{{ url_for('delete') }}">
+  <p>UserName: <input type="text" id="fname2" name="fname2" /><br /></p>
+  <p>password: <input type="password" id="fcode2" name="fcode2" /><br /></p>
 
-<input type="submit" name="post-btn" value="Submit Editing" class="btn btn-submit btn-outline" />
- 
-</form>
-
-<p>
+  <p>New type: <input type="text" id="ftype2" name="ftype2" /><br /></p>
+  <p>New urgency: <input type="text" id="furgency2" name="furgency2" /><br /></p>
+  <p>new tagged usernames: <input type="text" id="ftagged2" name="ftagged2" /><br /></p>
+  <p>
+    Old Content:
+    <textarea type="text" id="fmessage2" name="fmessage2"></textarea>
+  </p>
+  <p>
+    New Content:
+    <textarea type="text" id="fmessage3" name="fmessage3"></textarea>
+  </p>
+  <p>
     <a href="{{ url_for('read')}}">Cancel</a>
     <input type="submit" name="post-btn" value="Submit Editing" class="btn btn-submit btn-outline" />
   </p>
+
+</form>
 {% endblock %}
