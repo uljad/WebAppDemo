@@ -69,5 +69,5 @@ create the `.env` and `run flask` to enjoy! The i6 hosted website was working un
 
 Final Submission 10 am, Dec 7
 
-I am tryint to implement professor's feedback. 
+I tried to implement professor's feedback. I changed back to the 10 am submission, nothing worked. This is the same submission as the 10 am.  
 
