@@ -144,7 +144,7 @@ def delete():
     return render_template('delete.html') # tell the web browser to make a request for the /read route.
 
 
-@app.route('/delete',methods=['POST'])
+@app.route('/delete',methods=['DELETE'])
 def delete_post():
     """
     Route for GET requests to the delete page.
